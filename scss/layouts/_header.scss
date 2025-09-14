@@ -60,7 +60,13 @@
     gap: var(--spacing-md-2);
 
     .user__profile {
+      display: flex;
       width: clamp(1.375rem, 0.906rem + 4vw, 3.125rem);
+      border-radius: 100%;
+
+      &:hover {
+        outline: 2px solid var(--color-primary-1);
+      }
     }
 
     #cart-button:hover path {
