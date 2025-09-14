@@ -67,6 +67,9 @@ export class Cart {
       ".product__preview-previous"
     ),
     previewImages: document.querySelectorAll(".product__preview-image img"),
+    thumbnailListItem: document.querySelectorAll(
+      ".product__preview-thumbnails li"
+    ),
     thumbnailListButtons: document.querySelectorAll(
       ".product__preview-thumbnails button"
     ),
@@ -343,15 +346,19 @@ export class Cart {
   }
 
   selectedPreviewThumbnail() {
-    const { previewImages, thumbnailListButtons, thumbnailSelected } =
-      this.#cartDOM;
+    const {
+      previewImages,
+      thumbnailListItem,
+      thumbnailListButtons,
+      thumbnailSelected,
+    } = this.#cartDOM;
 
-    for (let thumbnail of thumbnailListButtons) {
+    for (let thumbnail of thumbnailListItem) {
       thumbnail.setAttribute("aria-selected", false);
     }
 
     for (let thumbnailButton of thumbnailSelected()) {
-      thumbnailButton.setAttribute("aria-selected", true);
+      thumbnailButton.parentElement.setAttribute("aria-selected", true);
     }
 
     for (let previewImage of previewImages) {

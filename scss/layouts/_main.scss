@@ -74,11 +74,11 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  &__preview-thumbnails li:has(button[aria-selected="true"]) {
+  &__preview-thumbnails li[aria-selected="true"] {
     outline: 2px solid var(--color-primary-1);
   }
 
-  &__preview-thumbnails button[aria-selected="true"]::before {
+  &__preview-thumbnails li[aria-selected="true"] button::before {
     content: "";
     position: absolute;
     inset: 0;
