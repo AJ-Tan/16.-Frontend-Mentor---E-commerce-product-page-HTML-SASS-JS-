@@ -1,0 +1,38 @@
+:root {
+  /* Color */
+  /** Primary **/
+  --color-primary-1: hsl(26, 100%, 55%);
+  --color-primary-1-hover: hsl(26, 100%, 66%);
+  --color-primary-2: hsl(25, 100%, 94%);
+
+  /** Neutral **/
+  --color-neutral-1: hsl(0, 0%, 100%);
+  --color-neutral-2: hsl(228, 29%, 97%);
+  --color-neutral-3: hsl(220, 14%, 75%);
+  --color-neutral-4: hsl(219, 9%, 45%);
+  --color-neutral-5: hsl(220, 13%, 13%);
+  --color-neutral-6: hsl(0, 0%, 0%);
+  --color-neutral-6-opac-75: hsla(0, 0%, 0%, 0.75);
+
+  /* Spacing */
+  --spacing-sm-1: 0.5rem;
+  --spacing-sm-2: 0.75rem;
+  --spacing-md-1: 1rem;
+  --spacing-md-2: 1.5rem;
+  --spacing-lg-1: 2rem;
+  --spacing-lg-2: 2.5rem;
+  --spacing-xl-1: 3rem;
+  --spacing-xl-2: 3.5rem;
+  --spacing-xxl-1: 4.5rem;
+  --spacing-xxl-2: 7rem;
+
+  /* Animation */
+  --motion-factor: 1;
+  --animation-speed-slow: calc(1.5s * var(--motion-factor));
+  --animation-speed-normal: calc(1s * var(--motion-factor));
+  --animation-speed-fast: calc(0.5s * var(--motion-factor));
+
+  @media (prefers-reduced-motion: reduce) {
+    --motion-factor: 0;
+  }
+}

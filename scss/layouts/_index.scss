@@ -1,0 +1,48 @@
+@forward "header";
+@forward "main";
+@forward "footer";
+@forward "keyframes";
+@use "../utils/" as *;
+
+body > header,
+body > main,
+body > footer {
+  margin-inline: auto;
+}
+
+.primary-button {
+  flex-grow: 1;
+
+  display: flex;
+  gap: var(--spacing-sm-1);
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.5rem;
+  padding-block: var(--spacing-md-1);
+
+  font-weight: 700;
+
+  background-color: var(--color-primary-1);
+  white-space: nowrap;
+
+  svg {
+    transform: scale(0.8);
+  }
+
+  path {
+    fill: var(--color-neutral-5);
+  }
+
+  &:hover {
+    background-color: var(--color-primary-1-hover);
+  }
+}
+
+@include breakpoint("tablet") {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: 64rem;
+  }
+}

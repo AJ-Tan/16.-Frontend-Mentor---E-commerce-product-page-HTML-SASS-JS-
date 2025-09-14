@@ -1,0 +1,19 @@
+$breakpointList: (
+  "mobile": 23.437em,
+  "tablet-sm": 39em,
+  "tablet": 50em,
+  "desktop": 64em,
+  "desktop-lg": 74.3125em,
+);
+
+@mixin breakpoint($size, $mode: "min") {
+  @if ($mode == "max") {
+    @media screen and (max-width: map-get($breakpointList,$size)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: calc(map-get($breakpointList,$size) + 1px)) {
+      @content;
+    }
+  }
+}
