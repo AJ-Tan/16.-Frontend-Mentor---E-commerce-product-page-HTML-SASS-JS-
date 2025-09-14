@@ -177,13 +177,12 @@
           </div>
 
           <ul class="product__preview-thumbnails" role="tablist">
-            <li>
+            <li role="tab">
               <button
                 type="button"
                 aria-controls="preview-product-image"
                 aria-label="Shoe's sole view."
                 aria-selected="true"
-                role="tab"
                 data-id="0"
               >
                 <img
@@ -192,13 +191,12 @@
                 />
               </button>
             </li>
-            <li>
+            <li role="tab">
               <button
                 type="button"
                 aria-controls="preview-product-image"
                 aria-label="Show front and back view."
                 aria-selected="false"
-                role="tab"
                 data-id="1"
               >
                 <img
@@ -207,13 +205,12 @@
                 />
               </button>
             </li>
-            <li>
+            <li role="tab">
               <button
                 type="button"
                 aria-controls="preview-product-image"
                 aria-label="Shoe's right view."
                 aria-selected="false"
-                role="tab"
                 data-id="2"
               >
                 <img
@@ -222,13 +219,12 @@
                 />
               </button>
             </li>
-            <li>
+            <li role="tab">
               <button
                 type="button"
                 aria-controls="preview-product-image"
                 aria-label="Shoe's left view."
                 aria-selected="false"
-                role="tab"
                 data-id="3"
               >
                 <img
@@ -352,7 +348,12 @@
             />
           </svg>
         </button>
-        <button type="button" class="product__preview-image" data-id="0">
+        <button
+          type="button"
+          class="product__preview-image"
+          data-id="0"
+          role="tabpanel"
+        >
           <img
             id="lightbox-product-image"
             class="product-image"
@@ -377,8 +378,8 @@
         </button>
       </div>
 
-      <ul class="product__preview-thumbnails">
-        <li>
+      <ul class="product__preview-thumbnails" role="tablist">
+        <li role="tab">
           <button
             type="button"
             aria-controls="lightbox-product-image"
@@ -392,7 +393,7 @@
             />
           </button>
         </li>
-        <li>
+        <li role="tab">
           <button
             type="button"
             aria-controls="lightbox-product-image"
@@ -406,7 +407,7 @@
             />
           </button>
         </li>
-        <li>
+        <li role="tab">
           <button
             type="button"
             aria-controls="lightbox-product-image"
@@ -420,7 +421,7 @@
             />
           </button>
         </li>
-        <li>
+        <li role="tab">
           <button
             type="button"
             aria-controls="lightbox-product-image"
